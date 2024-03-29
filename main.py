@@ -38,7 +38,7 @@ def count_report(l_dict):
     key_list = l_dict.copy().keys()
     for key in key_list:
         sort_list.append({"char": key, "count": l_dict[key]})
-    sort_list.sort(reverse=True, key=sort_madness)
+    sort_list.sort(reverse=True, key=lambda d : d["count"])
     return sort_list  
 
 main()
